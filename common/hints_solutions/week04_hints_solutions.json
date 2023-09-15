@@ -1,0 +1,62 @@
+{
+    "0": {
+        "typeCode": false,
+        "solution": "###week04_ex0",
+        "hints": {}
+    },
+    "1": {
+        "typeCode": true,
+        "solution": "###week04_ex1",
+        "hints": {}
+    },
+    "2": {
+        "typeCode": true,
+        "solution": "###week04_ex2",
+        "hints": {
+            "hint 1": "To split the data into two subsets means to create two new variables, filtering the dataset accordingly",
+            "hint 2": "Here's a reminder on how to create the subplots: `fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (6, 3)) `"
+        }
+    },
+    "3": {
+        "typeCode": true,
+        "solution": "###week04_ex3",
+        "hints": {
+            "hint 1 (part a)": "To compute the median, you would need to sort the dataframe by BMI first. You could do this using `diabetes_true.sort_values(by='BMI')`. Note that this does __not__ overwrite the diabetes_true variable, you would need to assign it!",
+            "hint 2 (part a)": "To compute the standard deviation, you are allowed to use `math.sqrt(..)`",
+            "hint 1 (part b)": "You might get slightly different results depending on which definition of quartiles you use."
+        }
+    },
+    "4": {
+        "typeCode": true,
+        "solution": "###week04_ex4",
+        "hints": {
+            "hint 1": "You can use `plt.xticks(rotation=x)`, where you need to find the optimal value for the number `x`"
+        }
+    },
+    "5": {
+        "typeCode": true,
+        "solution": "###week04_ex5",
+        "hints": {
+            "hint 1 (part a)": "Generate a for loop that iterates through 12 times, in which each time, we are appending to the corresponding array of `bmi_pregnancy_diabetes_true` or `bmi_pregnancy_diabetes_false`",
+            "hint 1 (part b)": "Recall to plot the boxplot, we simply provide the corresponding array, i.e `ax1.boxplot(bmi_pregnancy_diabetes_true, labels=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11+'])`",
+            "hint 2 (part b)": "To plot both boxplots, simply redo `hint 1 (part b)` for `ax2`"
+        }
+    },
+    "6": {
+        "typeCode": true,
+        "solution": "###week04_ex6",
+        "hints": {
+            "Hint 1 (part b)": "Recall to merge with different column names you can use the arguments `left_on=['Entity'],right_on=['Country']`",
+            "Hint 1 (part c)": "Use a loop to filter the DataFrame for each unique values of the `Continent` column",
+            "Hint 1 (part e)": "To find the largest population, could you use something similar to: `df[df['population'] == max(df['population'])].iloc[0]['Entity']`. Note that you will need to change `df` and `population`",
+            "Hint 1 (part f)": "Here is a starting point: https://stackoverflow.com/questions/15910019/annotate-data-points-while-plotting-from-pandas-dataframe"
+        }
+    },
+    "7": {
+        "typeCode": true,
+        "solution": "###week04_ex7",
+        "hints": {
+            "Hint 1": "Here's a reminder as to how to create 4 subplots: `fig, ((ax1, ax2),(ax3,ax4)) = plt.subplots(2,2, figsize = (15,15))`"
+        }
+    }
+}
