@@ -42,21 +42,14 @@
             "hint 2 (part b)": "To plot both boxplots, simply redo `hint 1 (part b)` for `ax2`"
         }
     },
-    "6": {
-        "typeCode": true,
-        "solution": "###week04_ex6",
-        "hints": {
-            "Hint 1 (part b)": "Recall to merge with different column names you can use the arguments `left_on=['Entity'],right_on=['Country']`",
-            "Hint 1 (part c)": "Use a loop to filter the DataFrame for each unique values of the `Continent` column",
-            "Hint 1 (part e)": "To find the largest population, could you use something similar to: `df[df['population'] == max(df['population'])].iloc[0]['Entity']`. Note that you will need to change `df` and `population`",
-            "Hint 1 (part f)": "Here is a starting point: https://stackoverflow.com/questions/15910019/annotate-data-points-while-plotting-from-pandas-dataframe"
-        }
+    "5.1": {
+        "typeCode": false,
+        "solution": "###week04_ex5.1",
+        "hints": {}
     },
-    "7": {
-        "typeCode": true,
-        "solution": "###week04_ex7",
-        "hints": {
-            "Hint 1": "Here's a reminder as to how to create 4 subplots: `fig, ((ax1, ax2),(ax3,ax4)) = plt.subplots(2,2, figsize = (15,15))`"
-        }
+    "6": {
+        "typeCode": false,
+        "solution": "###week04_ex6",
+        "hints": {}
     }
 }
