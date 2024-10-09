@@ -21,16 +21,16 @@
         "typeCode": true,
         "solution": "###week04_ex3",
         "hints": {
-            "hint 1 (part a)": "To compute the median, you would need to sort the dataframe by BMI first. You could do this using `diabetes_true.sort_values(by='BMI')`. Note that this does __not__ overwrite the diabetes_true variable, you would need to assign it!",
-            "hint 2 (part a)": "To compute the standard deviation, you are allowed to use `math.sqrt(..)`",
-            "hint 1 (part b)": "You might get slightly different results depending on which definition of quartiles you use."
+          "hint 1 (part a)": "Look up the pandas documentation!",
+            "hint 1 (part b)": "To compute the median, you would need to sort the dataframe by BMI first. You could do this using `diabetes_true.sort_values(by='BMI')`. Note that this does __not__ overwrite the diabetes_true variable, you would need to assign it!",
+            "hint 2 (part b)": "To compute the standard deviation, you are allowed to use `math.sqrt(..)`"
         }
     },
     "4": {
         "typeCode": true,
         "solution": "###week04_ex4",
         "hints": {
-            "hint 1": "You can use `plt.xticks(rotation=x)`, where you need to find the optimal value for the number `x`"
+            "hint 1": "You can use `plt.xticks(rotation=x, ha='right')`, where you need to find the optimal value for the number `x`"
         }
     },
     "5": {

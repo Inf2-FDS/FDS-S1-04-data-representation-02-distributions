@@ -1,7 +1,7 @@
 ###week04_ex0
 People can only die once, so it is likely that there will be fewer older people than younger ones.
 
-Many societies have a growing young population when the average numbers of children per woman is greater than 2
+Many societies have a growing young population when the average numbers of children per woman is greater than 2.
 ###week04_ex0_end
 
 ###week04_ex1
@@ -34,28 +34,31 @@ ax1.set_ylim(ylim)
 ###week04_ex2_end
 
 ###week04_ex3
-n_patients = len(diabetes_true['BMI']) #268 patients, thus the median is the average of the 134th and 135th value (in a sorted list) 
+# a
+print(diabetes_true['BMI'].quantile(0.25), diabetes_true['BMI'].quantile(0.75), diabetes_true['BMI'].quantile(0.75) - diabetes_true['BMI'].quantile(0.25), diabetes_true['BMI'].median(), diabetes_true['BMI'].mean(), diabetes_true['BMI'].std())
+
+# b
+n_patients = len(diabetes_true['BMI']) #268 patients, thus the median is the average of the 134th and 135th value (in a sorted list)
 diabetes_sorted = diabetes_true.sort_values(by='BMI')['BMI']
 median = (diabetes_sorted.iloc[int(n_patients/2)]+diabetes_sorted.iloc[int(n_patients/2)-1])/2 # Remember that the first entry is 0 not 1, thus we need to take the value at 133th and 134th position
 lower_half = diabetes_sorted[0:134]
 upper_half = diabetes_sorted[134:]
-lower_quartile = (lower_half.iloc[int(n_patients/4)]+lower_half.iloc[int(n_patients/4)-1])/2 
+lower_quartile = (lower_half.iloc[int(n_patients/4)]+lower_half.iloc[int(n_patients/4)-1])/2
 upper_quartile = (upper_half.iloc[int(n_patients/4)-1]+upper_half.iloc[int(n_patients/4)])/2
 inter_quartile_range = upper_quartile - lower_quartile
 mean = diabetes_sorted.sum()/n_patients
 squared_diff = (diabetes_sorted-mean)**2
 std= math.sqrt(squared_diff.sum()/(n_patients-1))
 print(lower_quartile, upper_quartile, inter_quartile_range, median, mean, std)
-
-# b
-print(diabetes_true['BMI'].quantile(0.25), diabetes_true['BMI'].quantile(0.75), diabetes_true['BMI'].quantile(0.75) - diabetes_true['BMI'].quantile(0.25), diabetes_true['BMI'].median(), diabetes_true['BMI'].mean(), diabetes_true['BMI'].std())
 ###week04_ex3_end
 
 ###week04_ex4
+plt.figure(figsize=(4, 2))
 plt.boxplot(bmi, labels=['Patients diagnosed with diabetes', 'Patients not diagnosed with diabetes'])
 plt.ylabel('BMI')
 plt.title('BMI of female patients with and without diabetes')
-plt.xticks(rotation=-15)
+plt.xticks(rotation=15, ha='right')
+# Note that it might look even better to change the labels to "with diabetes" and "without diabetes".
 ###week04_ex4_end
 
 ###week04_ex5
